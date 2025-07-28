@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 70%; /* 👈 Shrinks image size */
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height:200;
+}
+
+
+.overlay-image {
+  position: absolute;
+  margin-top: 100px;
+  left: 340px;
+
+}
+
+.overlay-image1 {
+  position: absolute;
+  margin-top: -110px;
+  left: -150px;
+  transform: scale(0.35);
+}
+
+.text {
+  position: absolute;
+  top: 32%;
+  left: 68%; /* moved more to the right */
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+  color: #333;
+}
+
+.text h1 {
+  margin: 10px 0 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.text h1 span {
+  color: #2A5CFF;
+}
+
+.text p {
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+/* Vertical line between first and second stat */
+.line {
+  width: 4px;              /* thick vertical line */
+  height: 100px;            /* adjust as needed */
+  background-color: #000;  /* black color */
+}
+
+.value{
+  font-size: 32px; /* Increase this value as needed */
+  font-weight: bold;
+}
+
+.label{
+  color:#2A5CFF;
+}

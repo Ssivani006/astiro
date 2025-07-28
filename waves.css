@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.footer {
+  background: linear-gradient(to top right, #99bdf5, #c6d9fb);
+  position: relative;
+  color: #000;
+}
+
+.wave-bg {
+  background: linear-gradient(to top left, #9bbff6 25%, #c5d9f6 45%, #e6edf6 60%);
+  padding: 40px 60px 20px;
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #000;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  margin: 10px 20px;
+}
+
+.footer-col h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.footer-col.contact p,
+.footer-col.contact address {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col.contact i {
+  margin-right: 8px;
+  color: #000;
+}
+
+.footer-col.contact a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-icons a {
+  color: #000;
+  font-size: 18px;
+  margin-right: 12px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.logo-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.logo-section img {
+  width: 130px;
+}
