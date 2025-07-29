@@ -43,10 +43,8 @@
     height: 20px;
     width: 20px;    
     margin-right: 6px;
-    object-fit: contain;
     transition: transform 0.2s ease;
   }
-
   .icon:hover {
     transform: scale(1.1);
   }
@@ -172,6 +170,110 @@
   .breathe {
     animation: breathe 3s ease-in-out infinite;
   }
+  
+.flip-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  background-color: #88a5de;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+  min-height: 80vh;
+}
+
+/* Individual Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 260px;
+  height: 340px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FRONT */
+.flip-card-front {
+  background-color: #c8d4ec;
+}
+
+.card-label {
+  margin-top: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* BACK with modern glass effect */
+.flip-card-back {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transform: rotateY(180deg);
+  color: #fff;
+  background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); /* Optional subtle texture */
+  background-color: rgba(104, 137, 199, 0.6); /* Slightly deeper blue */
+  transition: all 0.5s ease;
+  padding: 30px 20px;
+}
+
+.flip-card-back:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.flip-card-back h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.flip-card-back p {
+  font-size: 15px;
+  color:black;
+  line-height: 1.6;
+}
+
+/* Optional: add an icon or subtle image */
+.flip-card-back::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
 
   /* ========== UPDATED ABOUT SECTION ========== */
   .about-section {
@@ -377,47 +479,7 @@
     background-color: #88a5de;
   }
 
-  .vvm-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 60px 20px;
-    background-color: #8fa3db;
-    text-align: center;
-  }
 
-  .vvm-card {
-    background-color: #b9c8f1;
-    width: 300px;
-    padding: 30px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .vvm-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .vvm-icon {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 20px;
-  }
-
-  .vvm-card h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #000;
-  }
-
-  .vvm-card p {
-    font-size: 14px;
-    color: #000;
-    line-height: 1.6;
-  }
   /* 🔥 Hover Animation for Our Services */
 .service-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -427,4 +489,351 @@
 .service-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.read-btn {
+  background: #4960e8;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* space between text and arrow */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.read-btn .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.read-btn:hover {
+  background: #3347b0;
+  transform: scale(1.05);
+}
+
+.read-btn:hover .arrow {
+  transform: translateX(6px); /* arrow slides right */
+}
+
+
+.service1-btn .arrow,
+.service2-btn .arrow,
+.service3-btn .arrow {
+  transition: transform 0.3s ease;
+}
+
+.service1-btn:hover,
+.service2-btn:hover,
+.service3-btn:hover {
+  transform: scale(1.05);
+}
+
+.service1-btn:hover,
+.service2-btn:hover,
+.service3-btn:hover {
+  background: #b6c3f3; /* slightly darker hover */
+  transform: scale(1.05);
+}
+
+.service1-btn:hover .arrow,
+.service2-btn:hover .arrow,
+.service3-btn:hover .arrow {
+  transform: translateX(6px);
+}
+.service1-btn, .service2-btn, .service3-btn {
+  background: #d4dbf9;   /* keep your existing bg color */
+  color: black;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 10px 20px; /* balanced padding */
+  min-width: 130px;   /* stop it from stretching too wide */
+  height: 42px;       /* increase button height */
+  border: none;
+  border-radius: 10px; /* less rounded for a professional look */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;           /* space between text & arrow */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+/*careers start*/
+.career-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.career-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.career-title span {
+  color: #90b4f4;
+}
+
+.job-card {
+  background-color: #88a5de;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.job-info {
+  max-width: 70%;
+  text-align: left;
+}
+
+.job-info h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.job-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.job-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.job-details {
+  list-style: none;
+  padding: 0;
+}
+
+.job-details li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.job-details li::before {
+  content: "●";
+  margin-right: 8px;
+  color: #000;
+  font-size: 0.9rem;
+}
+
+.apply-btn {
+  background: #1c1c1c;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: #333;
+}
+/*careers end*/
+/*contact us start*/
+body {
+  font-family: 'Inter', sans-serif;
+  background: #e7e9ec;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.contact-container {
+  background: #fff;
+  width: 900px;
+  display: flex;
+  position: relative;
+  padding: 40px 50px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Info Box */
+.info-box {
+  background: #7da6dc;
+  color: white;
+  padding: 25px;
+  width: 300px;
+  position: absolute;
+  left: -160px;
+  top: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.info-box h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.info-box p {
+  margin: 15px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.info-box i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Contact Form */
+.form-box {
+  margin-left: 200px;
+  flex: 1;
+}
+
+.form-box h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.form-box label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 500;
+}
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 8px 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  outline: none;
+  background: transparent;
+}
+
+/*contact us end*/
+.footer {
+    position: relative;
+    width: 100vw;              /* Full viewport width */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;        /* Center full-width out of container */
+    margin-right: -50vw;
+
+    overflow: hidden;
+}
+.footer .wave-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;                 /* Ensures full-width */
+    height: 600px;                /* Adjust if your image is taller/shorter */
+    background: url('/Astiro_Images/wave.png') no-repeat top center;
+    background-size: 100% 100%;   /* Stretches wave to fill the box */
+    pointer-events: none;
+    z-index: 1;
+}
+.footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 160px 40px 40px 40px; /* Push content below the wave */
+}
+.footer-col {
+    flex: 1;
+    margin-right: 30px;
+    min-width: 180px;
+}
+.footer-col:last-child {
+    margin-right: 0;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.footer-logo img {
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+}
+.footer-logo-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #231F20;
+}
+.footer p, .footer a, .footer li {
+    color: #231F20;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 7px 0;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .contact-info {
+    margin-bottom: 24px;
+}
+.footer .contact-info i {
+    margin-right: 8px;
+}
+.footer .footer-list {
+    list-style: none;
+    padding: 0;
+}
+.footer .footer-title {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.footer .social-icons {
+    margin-top: 12px;
+}
+.footer .social-icons a {
+    color: #231F20;
+    margin-right: 13px;
+    font-size: 1.55em;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.footer .social-icons a:last-child {
+    margin-right: 0;
+}
+.footer .social-icons a:hover {
+    color: #4960e8;
+}
+@media (max-width: 800px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 120px 15px 30px 15px; /* Also push down for mobile */
+    }
+    .footer-col {
+        margin-bottom: 32px;
+        margin-right: 0;
+    }
 }

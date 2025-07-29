@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.blog-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f6f8;
+  height: 100vh;
+  padding: 0 5%;
+  border-top: 2px solid #7b4df4; /* top purple border */
+}
+
+.text-content h1 {
+  font-size: 2em;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.image-content img {
+  max-width: 500px;
+  height: auto;
+}

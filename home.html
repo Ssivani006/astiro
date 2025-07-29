@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="home.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -27,11 +28,10 @@
       <a href="#"><img src="Astiro_Images/instagram.png" alt="Instagram" class="social"></a>
       <a href="#"><img src="Astiro_Images/facebook.png" alt="Facebook" class="social"></a>
       <a href="#"><img src="Astiro_Images/twitter.png" alt="X" class="social"></a>
-      <a href="#"><img src="Astiro_Images/linkedin.png" alt="LinkedIn" class="social"></a>
-      <a href="#"><img src="Astiro_Images/whatsapp.png" alt="WhatsApp" class="social"></a>
+      <a href="#"><img src="Astiro_Images/linkedin.png" alt="LinkedIn" class="social"></a></a>
     </div>
   </header>
-
+<!--navbar start-->
   <nav class="navbar">
     <div class="logo">
       <img src="Astiro_Images/logo.png" alt="Astiro Logo" />
@@ -45,7 +45,7 @@
       <li><a href="#">Contact Us</a></li>
     </ul>
   </nav>
-
+<!--navbar end-->
   <section class="hero">
     <div class="hero-text">
       <h1>SAP-Powered Solutions.<br>Industry-Driven Innovation.</h1>
@@ -56,30 +56,60 @@
       <img src="sap-image.png" alt="SAP Illustration" class="breathe">
     </div>
   </section>
-  <section class="vvm-section">
-  <div class="vvm-card">
-    <img src="vision-icon.png" alt="Vision Icon" class="vvm-icon">
-    <h3>Our Vision</h3>
-    <p>
-      A globally acclaimed IT services company, empowering every customer to become a best-run business through honest, transparent, and sustainable partnerships.
-    </p>
-  </div>
-  <div class="vvm-card">
-    <img src="mission-icon.png" alt="Mission Icon" class="vvm-icon">
-    <h3>Our Mission</h3>
-    <p>
-      We deliver global IT services rooted in honesty and transparency, helping businesses run smarter, faster, and more efficiently with innovative SAP and technology-driven solutions.
-    </p>
-  </div>
-  <div class="vvm-card">
-    <img src="values-icon.png" alt="Values Icon" class="vvm-icon">
-    <h3>Our Values</h3>
-    <p>
-      We believe in integrity through honesty and strong principles. We're flexible to adapt with changing needs, and we put people first—caring for our team, clients, and communities.
-    </p>
-  </div>
-</section>
+<!--mission vision values start-->
+<div class="flip-card-container">
 
+  <!-- Vision Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="Astiro_Images\vision.png" alt="Vision" style="width:180px;">
+        <h4 class="card-label">Vision</h4>
+      </div>
+      <div class="flip-card-back">
+        <div>
+          <h3>Our Vision</h3>
+          <p>A globally acclaimed IT services company, empowering every customer to become a best-run business through honest, transparent, and sustainable partnerships
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="Astiro_Images\mission.png" alt="Mission" style="width:180px;">
+        <h4 class="card-label">Mission</h4>
+      </div>
+      <div class="flip-card-back">
+        <div>
+          <h3>Our Mission</h3>
+          <p>We deliver global IT services rooted in honesty and transparency, helping businesses run smarter, faster, and more efficiently with innovative SAP and technology-driven solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Values Card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="Astiro_Images\values.png" alt="Values" style="width:180px;">
+        <h4 class="card-label">Values</h4>
+      </div>
+      <div class="flip-card-back">
+        <div>
+          <h3>Our Values</h3>
+          <p>We believe in integrity through honesty and strong principles. We're flexible to adapt with changing needs, and we put people first—caring for our team, clients, and communities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--mission vision values end-->
+<!--about us start-->
 <section class="about-section">
   <div class="about-left">
     <div class="arrow-shape">
@@ -122,6 +152,8 @@
     </div>
   </div>
 </section>
+<!--about us end-->
+<!--services start-->
 <section class="services-section">
   <h2 class="services-heading">Our Services</h2>
   <div class="services-cards">
@@ -129,22 +161,158 @@
       <h3>SAP Solutions</h3>
       <img src="Astiro_Images\services1.png" alt="SAP Icon" class="service1-icon">
       <p>We provide customized SAP services from implementation to support, helping businesses streamline operations and drive growth.</p>
-      <button class="service1-btn"></button>
+      <button class="service1-btn">
+        Read More <span class="arrow">→</span>
+      </button>
+
     </div>
     <div class="service-card digital-service">
       <h3>Digital Services</h3>
       <img src="Astiro_Images\Technology-Solutions black.png" alt="Digital Icon" class="service-icon">
       <p>We deliver cutting-edge digital services from strategy to execution, helping businesses enhance customer experiences, streamline operations, and drive growth.</p>
-      <button class="service2-btn"></button>
+      <button class="service2-btn">
+        Read More <span class="arrow">→</span>
+      </button>
+
     </div>
     <div class="service-card quality-service">
       <h3>Quality Engineering</h3>
       <img src="Astiro_Images\services3.png" alt="Quality Icon" class="service-icon">
       <p>We ensure high-quality SAP solutions through automated testing, AI insights, and DevOps, helping you deliver faster with greater reliability.</p>
-      <button class="service3-btn"></button>
+      <button class="service3-btn">
+        Read More <span class="arrow">→</span>
+      </button>
+
+
     </div>
   </div>
 </section>
+<!--service end-->
+<!--careers start-->
+<section class="career-section">
+  <h1 class="career-title">
+    Career <span>Opportunities</span>
+  </h1>
+
+  <div class="job-card">
+    <div class="job-info">
+      <h2>SAP FICO Consultant</h2>
+      <h3>6–8 years of experience</h3>
+      <p>
+        We are seeking a highly skilled SAP FICO Consultant with 6–8 years of
+        experience specializing in SAP Finance and Controlling module. The ideal
+        candidate will demonstrate a proven track record in implementation,
+        configuration, and ongoing support of SAP FICO solutions.
+      </p>
+      <ul class="job-details">
+        <li><strong>Full time</strong></li>
+        <li><strong>Location:</strong> Remote</li>
+      </ul>
+    </div>
+    <a href="#" class="apply-btn">Apply Now -></a>
+  </div>
+</section>
+<!--careers end-->
+<!--contact us start-->
+<div class="contact-section">
+  <div class="contact-container">
+    <!-- Info Box -->
+    <div class="info-box">
+      <h3>Info</h3>
+      <p><i class="fas fa-map-marker-alt"></i> BG3 Subhiksha Apts, No 43, Perumal Koil St, Choolaimedu, Chennai, Tamil Nadu. 600094</p>
+      <p><i class="fas fa-envelope"></i> sales@astiro-systems.com</p>
+      <p><i class="fas fa-phone"></i> +91 9150009880</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com" target="_blank">https://www.linkedin.com</a></p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-box">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4"></textarea>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<!--contact us end-->
+<!--footer start-->
+<div class="footer">
+    <div class="wave-bg"></div>
+    <div class="footer-content">
+        <div class="footer-col">
+            <div class="contact-info">
+              <br>
+              <br>
+              <br>
+                <div><i class="fas fa-envelope"></i>sales@astiro-systems.com</div>
+                <div><i class="fas fa-phone"></i>+91 9150009880</div>
+                <br>
+                <div>BG3 Subhiksha Apts, No 43,<br>
+                Perumal Koil St, Choolaimedu,<br>
+                Chennai, Tamil Nadu.<br>
+                600094</div>
+            </div>
+            <br>
+            <br>
+            <div class="footer-logo">
+                <img src="/Astiro_Images/logo.png" alt="Astiro Logo" />
+            </div>
+        </div>
+
+        <div class="footer-col">
+          <br>
+              <br>
+              <br>
+            <div class="footer-title">Useful Links</div>
+            <ul class="footer-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <br>
+              <br>
+              <br>
+            <div class="footer-title">Dimension Offerings</div>
+            <ul class="footer-list">
+                <li><a href="#">SAP ECC</a></li>
+                <li><a href="#">S4 HANA</a></li>
+                <li><a href="#">Fiori UI/UX</a></li>
+                <li><a href="#">Chatbots</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <br>
+              <br>
+              <br>
+            <div class="footer-title">Follow us</div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer end-->
 </body>
 </html>
 <script>
@@ -185,3 +353,4 @@
     observer.observe(aboutSection);
   }
 </script>
+
