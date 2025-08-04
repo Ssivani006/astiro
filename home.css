@@ -647,6 +647,93 @@
   background: #333;
 }
 /*careers end*/
+/* Popup Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  position: relative;
+  animation: popup 0.3s ease;
+  margin-top: 60px; 
+}
+
+/* Animation */
+@keyframes popup {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Form Fields */
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  background: #e9ebf0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* File Upload */
+.upload-box {
+  display: flex;
+  align-items: center;
+  background: #e9ebf0;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.upload-box span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #91a9e2;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background 0.3s;
+}
+.submit-btn:hover {
+  background: #7a95d1;
+}
 /*contact us start*/
 body {
   font-family: 'Inter', sans-serif;

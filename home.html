@@ -209,9 +209,34 @@
         <li><strong>Location:</strong> Remote</li>
       </ul>
     </div>
-    <a href="#" class="apply-btn">Apply Now -></a>
+    <button type="button" class="apply-btn">Apply Now →</button>
   </div>
 </section>
+<!-- Modal Structure -->
+<div id="applyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>Apply Now</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Description" rows="4" required></textarea>
+      <label class="upload-box">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+          width="16" height="16" viewBox="0 0 24 24" 
+          fill="none" stroke="currentColor" stroke-width="2" 
+          stroke-linecap="round" stroke-linejoin="round" 
+          class="feather feather-paperclip">
+        <path d="M21.44 11.05l-8.49 8.49a5.36 5.36 0 0 1-7.58-7.58l8.49-8.49a3.57 3.57 0 0 1 5.05 5.05l-8.49 8.49a1.79 1.79 0 0 1-2.53-2.53l7.07-7.07"/>
+      </svg>
+      <span>Upload Resume (.pdf)</span>
+      <input type="file" accept=".pdf" hidden>
+      </label>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
 <!--careers end-->
 <!--contact us start-->
 <div class="contact-section">
@@ -352,5 +377,19 @@
   if (aboutSection) {
     observer.observe(aboutSection);
   }
+</script>
+<script>
+  const modal = document.getElementById("applyModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Attach to all .apply-btn buttons
+  document.querySelectorAll(".apply-btn").forEach(btn => {
+    btn.onclick = () => modal.style.display = "flex";
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = e => {
+    if (e.target === modal) modal.style.display = "none";
+  };
 </script>
 
